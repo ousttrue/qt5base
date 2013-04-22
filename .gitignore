@@ -1,0 +1,11 @@
+*.sln
+*.suo
+*.sdf
+*.opensdf
+ipch
+obj
+debug
+release
+*.vcxproj*
+moc_*.cpp
+ui_*.h

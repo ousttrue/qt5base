@@ -1,0 +1,19 @@
+MOC=$(QT5_DIR)\bin\moc
+MOC_FILES=moc_mainwindow.cpp
+UIC=$(QT5_DIR)\bin\uic
+UI_FILES=ui_mainwindow.h
+
+
+all: $(MOC_FILES) $(UI_FILES)
+
+
+moc_mainwindow.cpp: mainwindow.h
+	$(MOC) -o $@ $?
+
+
+ui_mainwindow.h: mainwindow.ui
+	$(UIC) -o $@ $?
+
+
+clean:
+	rm -f $(MOC_FILES) $(UI_FILES)
